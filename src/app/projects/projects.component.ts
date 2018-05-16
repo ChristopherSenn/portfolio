@@ -8,6 +8,7 @@ import { PROJECTS } from './projectsList';
 })
 export class ProjectsComponent implements OnInit {
   projects = PROJECTS;
+  imagePath = '/assets/images/projects/';
 
   constructor() {
   }
@@ -15,16 +16,17 @@ export class ProjectsComponent implements OnInit {
   ngOnInit() {
     const items = document.getElementsByClassName('item');
     for (let i = 0; i < items.length; i++) {
-      items[i].onmousemove = this.updatePosition;
+      const elem: HTMLElement = <HTMLElement> items[i];
+      elem.onmousemove = this.updatePosition;
     }
   }
 
   updatePosition(e: MouseEvent) {
-    let elem: HTMLElement = e.target;
+    let elem: HTMLElement = <HTMLElement> e.target;
     if (elem.nodeName === 'image' || elem.nodeName === 'text') { // fixes elem depending if the event gets triggered by the image or svg
       elem = elem.parentElement.parentElement;
     }
-    elem = elem.firstElementChild.firstElementChild.firstElementChild;
+    elem = <HTMLElement> elem.firstElementChild.firstElementChild.firstElementChild;
 
     elem.setAttribute('cx', '' + e.offsetX);
     elem.setAttribute('cy', '' + e.offsetY);
