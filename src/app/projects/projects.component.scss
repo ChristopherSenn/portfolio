@@ -1,37 +1,3 @@
-
-/*.projects {
-    margin-top: 10vh;
-    margin-left: 13.5vw;
-
-    display: flex;
-    flex-wrap: wrap;
-
-    :nth-child(2n+1) {
-        margin-right: 3vw;
-    }
-    .project {
-        margin-bottom: 5vh;
-        position: relative;
-        
-        .normal{
-            width: 35vw;
-            height: 19.77vw;
-            background-color: rgba(100,100,100,1);
-            z-index: 1000;
-        }
-
-        img {
-            margin: 0;
-            width: 35vw;
-            height: 19.77vw;
-            position: absolute;
-            top: 0;
-            z-index: 1;
-        }
-        
-    }
-}*/
-
 $db: #2f3238;
 $dc: #f5f5f5;
 $lb: #f9f9f9;
@@ -41,14 +7,14 @@ $l: #1abc89;
 
 
 main {
-  max-width: 1200px;
+  width: 84vw;
   margin: 0 auto;
-  //padding: 4rem 2rem;
 }
 
 header {
   text-align: center;
-  padding-bottom: 3rem;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 h1 {
@@ -61,7 +27,6 @@ h1 {
 .items {
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
 }
 
 .item {
@@ -71,10 +36,10 @@ h1 {
     position: relative;
     overflow: hidden;
 
-    width: 600px;
-    height: 400px;
+    width: 40vw;
+    height: 25vw;
 
-    margin: 5px;
+    margin: 1vw;
 
     cursor: pointer;
     background-color: lighten($db, 5);
@@ -110,7 +75,13 @@ text {
   font-weight: 600;
 }
 
-.svg-text {fill: lighten($db, 16)}
+.svg-text2 {
+  fill: lighten($db, 16)
+}
+.svg-text {
+  fill: white;
+  font-size: 40px;
+}
 .svg-masked-text {fill: rgba(#fff, 1);}
 
 image {

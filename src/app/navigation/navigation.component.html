@@ -3,14 +3,7 @@
 <input type="checkbox" id="burgerStateCheckbox" #cb>
 <label for="burgerStateCheckbox">
 
-  <nav>
-    <div class="wrapper">
-      <a (click)="cb.click(); enableScroll()" routerLink="">Home</a>
-      <a (click)="cb.click(); enableScroll()" routerLink="projects">Projects</a>
-      <a (click)="cb.click(); enableScroll()" routerLink="about">About</a>
-      <a (click)="cb.click(); enableScroll()" routerLink="contact">Contact</a>
-    </div>  
-  </nav>
+  
 
   <div (click)="disableScroll()" class="hamburger">
     <span class="line"></span>
@@ -18,3 +11,12 @@
     <span class="line"></span>
   </div>
 </label>
+
+<nav>
+  <div class="wrapper">
+    <a (click)="cb.click(); enableScroll()" routerLink="">Home</a>
+    <a (click)="cb.click(); enableScroll()" routerLink="projects">Projects</a>
+    <a (click)="cb.click(); enableScroll()" routerLink="about">About</a>
+    <a (click)="cb.click(); enableScroll()" routerLink="contact">Contact</a>
+  </div>  
+</nav>

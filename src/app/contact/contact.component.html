@@ -1,3 +1,24 @@
-<p>
-  contact works!
-</p>>
+<div class='items'>
+  <div class='item' *ngFor="let project of projects" (mousemove)="updatePosition($event)">
+    <svg preserveAspectRatio='xMidYMid slice' viewBox='0 0 600 400'>
+      <defs>
+        <clipPath  class="addId">
+          <circle cx='0' cy='0' fill='#000' r='250px'></circle>
+        </clipPath>
+      </defs>
+      <text class='svg-text' dy='.3em' x='50%' y='40%'>
+        move
+      </text>
+      <text class='svg-text2' dy='.3em' x='50%' y='60%'>
+        concept, design, implementation
+      </text>
+      <g  class="addClipPath">
+        <image height='100%' preserveAspectRatio='xMinYMin slice' width='100%'
+          attr.xlink:href="{{imagePath}}{{project.linkHoverPicture}}" xlink:href=""></image>
+        <!--><text class='svg-masked-text' dy='.3em' x='50%' y='40%'>
+          move
+        </text></!-->
+      </g>
+    </svg>
+  </div>
+</div>

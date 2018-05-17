@@ -36,7 +36,7 @@ nav {
   }
 }
 
-#burgerStateCheckbox:checked + label nav {
+#burgerStateCheckbox:checked ~  nav {
   -webkit-transform: translateY(100%);
   -ms-transform: translateY(100%);
   -o-transform: translateY(100%);
@@ -51,7 +51,7 @@ nav {
 }*/
 
 .hamburger {
-  z-index: 2;
+  z-index: 3;
   position: fixed;
   right: 5%;
   top: 5%;
